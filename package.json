@@ -15,7 +15,8 @@
     "react-native-pager-view": "^5.2.1",
     "react-native-tab-view": "^3.0.1",
     "react-redux": "^7.2.4",
-    "redux": "^4.1.0"
+    "redux": "^4.1.0",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

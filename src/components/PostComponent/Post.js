@@ -8,9 +8,9 @@ const _Post = props => {
   //console.log(props);
   return (
     <View style={styles.imageContainer}>
-      <ImageBackground source={{uri: props.post.imageUrl}} style={styles.image}>
-        <Text style = {styles.imageDescription}> {props.post.description} </Text>
-        <Text style = {styles.imageTitle}> {props.post.title} </Text>
+      <ImageBackground style={styles.image} source={{uri: props.post.imageUrl}}>
+        <Text style = {styles.imageDescription}>{props.post.description}</Text>
+        <Text style = {styles.imageTitle}>{props.post.title}</Text>
       </ImageBackground>
     </View>
   );
