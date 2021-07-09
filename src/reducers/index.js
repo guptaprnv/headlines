@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import {reducerForFeed1} from './reducerForFeed1';
-import {reducerForFeed2} from './reducerForFeed2';
+import {feeds} from './feed';
+import {entity} from './entity';
 
 export const reducers = combineReducers({
-  reducerForFeed1,
-  reducerForFeed2,
+  feeds,
+  entity,
 });

@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {connect} from 'react-redux';
 import {styles} from '../../styles';
@@ -19,32 +19,19 @@ const LikeOrDislike = props => {
 };
 const LikeBeforeConnect = props => {
   const handlePress = () => {
-    props.like(props.post.id);
+    props.like(props.news.id);
   };
+  //console.log('like', props);
   return (
     <View style={styles.likeContainer}>
       <TouchableOpacity onPress={handlePress}>
-        <LikeOrDislike like={props.post.like} />
+        <LikeOrDislike like={props.news.like} />
       </TouchableOpacity>
     </View>
   );
 };
-const mapStateToProps = (state, ownProps) => {
-  let props;
-  if (ownProps.feed === 1) {
-    props = {post: state.reducerForFeed1.entityList[ownProps.id]};
-  } else {
-    props = {post: state.reducerForFeed2.entityList[ownProps.id]};
-  }
-  //console.log('likeprops');
-  //console.log(props);
-  return props;
-};
 
 const mapDispactchToProps = dispatch => ({
-  like: id => dispatch({type: 'LIKE', id}),
+  like: newsId => dispatch({type: 'like', payload: {id: newsId}}),
 });
-export const Like = connect(
-  mapStateToProps,
-  mapDispactchToProps,
-)(LikeBeforeConnect);
+export const Like = connect(null, mapDispactchToProps)(LikeBeforeConnect);

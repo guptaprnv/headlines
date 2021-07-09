@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {Post} from './Post';
+import {News} from './news';
 import {Like} from './Like';
 import {styles} from '../../styles';
-export const PostContainer = props => {
+export const NewsItem = props => {
   return (
     <View style={styles.postContainer}>
-      <Post id={props.id} feed={props.feed} />
-      <Like id={props.id} feed={props.feed} />
+      <News news={props.news} />
+      <Like news={props.news} />
     </View>
   );
 };
-

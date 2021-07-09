@@ -1,18 +1,17 @@
 import * as React from 'react';
 import {View, useWindowDimensions} from 'react-native';
 import {TabView, SceneMap} from 'react-native-tab-view';
-import {NewsFeed1} from './NewsFeed1';
-import {NewsFeed2} from './NewsFeed2';
+import {NewsFeed} from './NewsFeed';
 import {styles} from '../../styles';
 const FirstRoute = () => (
   <View style={styles.newsFeed}>
-    <NewsFeed1 />
+    <NewsFeed feedId={'Feed1'} />
   </View>
 );
 
 const SecondRoute = () => (
   <View style={styles.newsFeed}>
-    <NewsFeed2 />
+    <NewsFeed feedId={'Feed2'} />
   </View>
 );
 
